@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    background: #fff8f0;
+    color: #33251f;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+h1, h2, h3 {
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 1px;
+}
+
+button {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 17px;
+}
+
+
+
+header {
+    background: #f1dfcf;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+button {
+    background: #8b4e35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.menu-table tr.row-highlight {
+    background: #ffe8c7;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 70px;
+}
+
+.error {
+    color: red;
+    margin: 2px 0;
+}
+
+#opening-status {
+    font-weight: bold;
+}
+
+#opening-status.open {
+    color: green;
+}
+
+#opening-status.closed {
+    color: red;
+}
+
+#form-response.success {
+    color: green;
+}
+
+#form-response.error {
+    color: red;
+}
+
+body.dark-mode {
+    background: #222;
+    color: white;
+}
+
+body.dark-mode header {
+    background: #382e29;
+}
+
+body.dark-mode section {
+    background: #333;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #222;
+    color: white;
+    border: 1px solid #777;
+}
+
+body.dark-mode .menu-table tr.row-highlight {
+    background: #51402e;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
