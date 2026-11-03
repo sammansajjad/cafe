@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>Dahlia Cafe</h2>
+        <button id="theme-toggle"> Dark Mode</button>
+    </nav>
+    <h1>Welcome to Dahlia Cafe</h1>
+    <p id="opening-status">Checking opening hours...</p>
+</header>
+
+<main>
+    <section>
+        <h2>Our Story</h2>
+        <p>We serve coffee, pastries, and tasty food in a friendly place.</p>
+        <p id="story-extra" hidden>
+            We want every visit to feel warm and relaxing.
+            Come and enjoy a drink or snack with us.
+        </p>
+        <button id="read-more">Read More</button>
+    </section>
+
+    <section>
+        <h2>Our Menu</h2>
+
+        <button data-filter="all">All</button>
+        <button data-filter="drinks">Drinks</button>
+        <button data-filter="pastries">Pastries</button>
+        <button data-filter="food">Food</button>
+
+        <table class="menu-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Order</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-category="drinks">
+                    <td>Latte</td>
+                    <td>Drinks</td>
+                    <td>300</td>
+                    <td><input class="order-item" type="checkbox" value="300" data-name="Latte"></td>
+                </tr>
+                <tr data-category="drinks">
+                    <td>Iced Tea</td>
+                    <td>Drinks</td>
+                    <td>280</td>
+                    <td><input class="order-item" type="checkbox" value="280" data-name="Iced Tea"></td>
+                </tr>
+                <tr data-category="pastries">
+                    <td>Chocolate Croissant</td>
+                    <td>Pastries</td>
+                    <td>400</td>
+                    <td><input class="order-item" type="checkbox" value="400" data-name="Chocolate Croissant"></td>
+                </tr>
+                <tr data-category="pastries">
+                    <td>Blueberry Muffin</td>
+                    <td>Pastries</td>
+                    <td>350</td>
+                    <td><input class="order-item" type="checkbox" value="350" data-name="Blueberry Muffin"></td>
+                </tr>
+                <tr data-category="food">
+                    <td>Grilled Sandwich</td>
+                    <td>Food</td>
+                    <td>500</td>
+                    <td><input class="order-item" type="checkbox" value="500" data-name="Grilled Sandwich"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Order Total</h2>
+
+        <label for="discount-type">Discount:</label>
+        <select id="discount-type">
+            <option value="0">No discount</option>
+            <option value="10">Student discount (10%)</option>
+            <option value="15">Senior discount (15%)</option>
+        </select>
+
+        <p id="discount-message">Choose a discount if eligible.</p>
+        <ul id="order-summary-items">
+            <li>No items selected.</li>
+        </ul>
+
+        <p>Subtotal: Rs. <span id="subtotal">0</span></p>
+        <p>Discount: Rs. <span id="discount-amount">0</span></p>
+        <p><strong>Total: Rs. <span id="total">0</span></strong></p>
+    </section>
+
+    <section>
+        <h2>Contact Form</h2>
+
+        <form id="contact-form" novalidate>
+            <label for="name">Name:</label>
+            <input id="name" type="text">
+            <p class="error" id="name-error"></p>
+
+            <label for="email">Email:</label>
+            <input id="email" type="text">
+            <p class="error" id="email-error"></p>
+
+            <label for="birth-year">Birth Year:</label>
+            <input id="birth-year" type="text" placeholder="e.g. 2002">
+            <p class="error" id="birth-year-error"></p>
+            <p id="age-message">Enter your birth year to calculate your age.</p>
+
+            <label for="special-notes">Special Requests (max 100 characters):</label>
+            <textarea id="special-notes" maxlength="100"></textarea>
+            <p><span id="character-count">100</span> characters remaining</p>
+
+            <button type="submit">Submit</button>
+            <p id="form-response"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Dahlia Cafe</p>
+</footer>
+
+</body>
+</html>
